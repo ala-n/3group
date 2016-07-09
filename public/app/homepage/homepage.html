@@ -1,6 +1,37 @@
-<h1>Home</h1>
 <div *ngIf="status==='user'">
-    <h3>I'm a user</h3>
+
+    <!--<table class="statistics-table">
+        <thead>
+            <tr>
+                <th>Test Header</th>
+                <th>Result 90%</th>
+            </tr>
+        </thead>
+
+        <thead>
+            <tr>
+                <th>Test Header</th>
+                <th>Result 90%</th>
+            </tr>
+        </thead>
+    </table>-->
+
+
+    <div class="statistics-div">
+        <div class="col s4 m4 float-left"> Test Header
+        </div>
+        <div class="check-button">
+            <div class="col s4 m4 "><a class="waves-effect default btn">Check</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="back-button">
+        <a class="waves-effect default btn">Back to menu</a>
+    </div>
+
+
 </div>
 <div *ngIf="status==='admin'">
     <h3>I'm an admin</h3>

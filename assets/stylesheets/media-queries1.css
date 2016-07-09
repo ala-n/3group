@@ -1,0 +1,73 @@
+@media (max-width: 768px) {
+.username,
+.log-out-button {
+display: none;
+}
+}
+
+
+@media (max-width: 768px) {
+.left-card-row,
+.right-card-row {
+float: none;
+}
+.row-width {
+width:100%;
+margin-left:-1%;
+}
+}
+
+@media (min-width: 1024px) {
+.row-width {
+width:70%;
+}
+}
+
+
+
+/*
+
+@media (min-width: 320px) {
+.right-card-row {
+margin: 0;
+}*/
+
+@media (max-width: 768px) {
+.timer {
+margin-left: 0;
+}
+}
+
+margin-left
+
+@media (width: 768px) {
+.margin-left {
+    box-sizing: none;
+}
+}
+
+
+
+@media (max-width: 768px) {
+.logo-padding {
+padding-left: 0;
+}
+.timer {
+	margin-left: 3%;
+
+}
+}
+
+@media (max-width: 425px) {
+.card {
+width: 300px;
+
+}
+}
+
+@media (min-width: 1440px) {
+.card {
+width: 300px;
+
+}
+}

@@ -1,0 +1,161 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ .page-flexbox-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+ }
+
+ main {
+  flex: 1 1 auto;
+ }
+
+ .footer{
+ 	background-color: black;
+ 	color:white;
+  position: absolute;
+  bottom: 0;
+  width: 100%
+ }
+
+.header-logo{
+ 
+ 
+  background-color: black;
+  color:white;
+ }
+
+
+.logo-padding{
+ 
+ padding-left: 100px;
+  
+ }
+
+ .username {
+  margin: 1.5%;
+  float:right;
+  font-size: 30px;
+ 
+}
+
+.timer {
+	margin-left: 43%;
+ font-size: 30px;
+  
+}
+
+.valign{
+  vertical-align: middle;
+}
+
+/*.flexbox-wrapper{
+     min-height: null; 
+   }
+
+ .log-out-button{
+ 	
+ 	
+ 	color: black;
+ 	background-color: white;
+  
+ 	 }
+
+   .ul{
+    margin-top: 0;
+   }
+
+ .start-button{
+  	color: black;
+ 	background-color: white;
+ 	 };
+
+ 
+
+.margin-left{
+  margin-left: 0;
+}
+
+
+.right-card-row{
+ 	float:right;
+ 	margin-left: 10%;
+ 	
+ }
+
+.row-width{
+	width:80%;
+}
+
+
+ /*.card {
+
+  width: 300px;
+  height: 400px;
+  margin: 24px 0;
+  padding: 16px;
+}*/
+
+.card-content {
+ 	  height: 50px;
+  margin-bottom: 90%;
+}
+
+
+.statistics-div{
+	
+    width:60%;
+    margin:1%;
+    margin-left:20%;
+    line-height: 3%;
+   padding: 3%;
+    border: 2px solid black;
+    font-size: 120%;
+    
+}
+
+
+
+.back-button{
+margin: 20px;
+margin-right:20%;
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 10%; /* Положение от нижнего края */
+    right: 0%;  /*Положение от правого края */
+       }
+
+     .check-button{
+float:right;
+vertical-align: top; 
+margin-bottom:20%;
+
+    
+  
+       }  
+
+.span{
+	position: relative; /* Относительное позиционирование */ 
+     top: 50px; /* Сдвиг сверху */ 
+}
+.float-left {
+ float:left;
+ }
+
+.float-right {
+ float:right;
+}
+
+
+.card-width{
+  width: 100%;
+}
+
+.ul-padding{
+  padding-right: 100px;
+}
