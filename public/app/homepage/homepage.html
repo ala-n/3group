@@ -1,4 +1,4 @@
-<div *ngIf="status==='user'">
+<div *ngIf="status==='teacher'">
 
     <!--<table class="statistics-table">
         <thead>
@@ -35,4 +35,40 @@
 </div>
 <div *ngIf="status==='admin'">
     <h3>I'm an admin</h3>
+</div>
+<div *ngIf="status==='user'">
+    <div class="valign-wrapper ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col s12 m5 card-width " align=center>
+                    <div class="card #fafafa grey lighten-5 valign">
+                        <div class="card-content" align=center>
+                            <span class="text-headline">Current Test</span>
+                            <p class="red-text">Nobody appointed you any test</p>
+                            <p class="card-content text-body">You can ask for it</p>
+                        </div>
+                        <div class="card-action" align=center>
+                            <a class="waves-effect default btn start-button">Ask</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 m5 offset-m2 card-width" align=center>
+                    <div class="card #fafafa grey lighten-5 ">
+
+                        <div class="card-content" align=center>
+                            <span class="text-headline">Past Test</span>
+                            <p class="card-content text-body">Check out your previous attempts</p>
+                        </div>
+                        <div class="card-action" align=center>
+                            <a class="waves-effect default btn start-button">Show</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </div>
