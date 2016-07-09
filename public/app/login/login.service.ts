@@ -22,7 +22,7 @@ export class LoginService {
         }
         else {
             console.log('response ' + response);
-            router.navigate(['/homepage', "user"]);
+            router.navigate(['/homepage', "admin"]);
         }
     }
 
