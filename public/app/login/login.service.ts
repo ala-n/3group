@@ -21,7 +21,7 @@ export class LoginService {
             console.log('Bad, bad, bad..');
         }
         else {
-            console.log('response ' + response);
+            //console.log('response ');
             router.navigate(['/homepage', "user"]);
         }
     }

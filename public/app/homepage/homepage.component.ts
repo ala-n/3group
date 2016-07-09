@@ -1,23 +1,28 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Router, ActivatedRoute} from "@angular/router";
+import {Router, ActivatedRoute, ROUTER_DIRECTIVES} from "@angular/router";
+import {Http} from '@angular/http';
 
 @Component({
     templateUrl: 'app/homepage/homepage.html',
     styleUrls: ['../assets/stylesheets/text1.css', '../assets/stylesheets/style1.css',
         '../assets/stylesheets/media-queries1.css', '../assets/stylesheets/materialize1.css',
-        '../assets/stylesheets/materialize.min1.css',]
+        '../assets/stylesheets/materialize.min1.css',],
 
-
+    directives: [ROUTER_DIRECTIVES]
 })
 
 export class HomepageComponent implements OnInit, OnDestroy {
     status;
+    availTest;
 
     private sub;
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router){}
+
+    constructor(private route:ActivatedRoute,
+                private router:Router,
+                private http:Http) {
+        this.availTest = true;
+    }
 
     ngOnInit() {
         var that = this;
@@ -25,6 +30,24 @@ export class HomepageComponent implements OnInit, OnDestroy {
             that.status = params['status'];
             console.log('that.status ' + that.status);
         });
+        if (this.status === 'user' || this.status === 'guest') {
+            //this.getData();
+        }
+        console.log(this.availTest);
+    }
+
+    getData() {
+        var that = this;
+        this.http.get('/' + status + '/availtest')
+            .toPromise()
+            .then(response => that.availTest = response.json().data)
+            .catch(this.handleError);
+    }
+
+
+    handleError(error:any) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
     }
 
     ngOnDestroy() {

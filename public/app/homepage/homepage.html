@@ -1,22 +1,4 @@
 <div *ngIf="status==='teacher'">
-
-    <!--<table class="statistics-table">
-        <thead>
-            <tr>
-                <th>Test Header</th>
-                <th>Result 90%</th>
-            </tr>
-        </thead>
-
-        <thead>
-            <tr>
-                <th>Test Header</th>
-                <th>Result 90%</th>
-            </tr>
-        </thead>
-    </table>-->
-
-
     <div class="statistics-div">
         <div class="col s4 m4 float-left"> Test Header
         </div>
@@ -25,22 +7,21 @@
             </div>
         </div>
     </div>
-
-
     <div class="back-button">
         <a class="waves-effect default btn">Back to menu</a>
     </div>
-
-
 </div>
+
 <div *ngIf="status==='admin'">
     <h3>I'm an admin</h3>
 </div>
+
 <div *ngIf="status==='user'">
     <div class="valign-wrapper ">
         <div class="container ">
             <div class="row ">
-                <div class="col s12 m5 card-width " align=center>
+
+                <div *ngIf="!availTest" class="col s12 m5 card-width " align=center>
                     <div class="card #fafafa grey lighten-5 valign">
                         <div class="card-content" align=center>
                             <span class="text-headline">Current Test</span>
@@ -53,10 +34,26 @@
                     </div>
                 </div>
 
+                <div *ngIf="availTest" class="col s12 m5 card-width " align=center >
+                    <div class="card #fafafa grey lighten-5 valign">
+                        <div class="card-content" align=center >
+                            <span class="text-headline">Current Test</span>
+                            <p class="green-text">At the end of the test you will get a percentage and an approximation of your level</p>
+                            <p class="card-content text-body">At the end of the test you will get a percentage and an approximation of your level</p>
+                        </div>
+
+
+                        <div class="card-action" align=center>
+                            <a class="waves-effect default btn start-button" [routerLink]="['/runTest']">Start</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
 
                 <div class="col s12 m5 offset-m2 card-width" align=center>
                     <div class="card #fafafa grey lighten-5 ">
-
                         <div class="card-content" align=center>
                             <span class="text-headline">Past Test</span>
                             <p class="card-content text-body">Check out your previous attempts</p>
@@ -66,9 +63,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
