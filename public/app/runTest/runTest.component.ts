@@ -4,6 +4,6 @@ import {Component} from "@angular/core";
     templateUrl: 'app/homepage/empty.html'
 })
 
-export class TestComponent {
+export class RunTestComponent {
 
 }
