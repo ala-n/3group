@@ -4,7 +4,6 @@ import 'rxjs/add/operator/toPromise';
 import {LoginData} from './login.data';
 
 
-
 @Injectable()
 export class LoginService {
 
@@ -16,26 +15,14 @@ export class LoginService {
     }
 
     public redirect(response, router) {
-        console.log('All good ' + response);
-        if(router === undefined){
-            console.log('Bad, bad, bad..');
-        }
-        else {
-            //console.log('response ');
-            router.navigate(['/homepage', "user"]);
-        }
+        router.navigate(['/homepage', "user"]);
+        //
     }
 
     public postAndRedirect(loginData:LoginData, router) {
         var header = new Headers();
         var that = this;
-
         header.append('Content-Type', 'application/json');
-        console.log(this.loginUrl, JSON.stringify(loginData), {headers: header});
-        console.log(' json ' + JSON.stringify(loginData));
-        console.log('url ' + this.loginUrl);
-
-
         this.http
             .post(this.loginUrl, JSON.stringify(loginData), {headers: header})
             .toPromise()
