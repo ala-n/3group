@@ -19,16 +19,16 @@ export class UploadFileComponent implements OnChanges, OnDestroy {
     onFileChangeListener(event) {
         let reader = new FileReader();
         let that = this;
-        reader.onload = ((e) => that.onFileLoaded(e));
+        //reader.onload = ((e) => that.onFileLoaded(e.));
         console.log(event);
         reader.readAsArrayBuffer(event.target.files[0]);
     }
 
-    onFileLoaded(buffer:ArrayBuffer) {
-        this.array = new Int8Array(buffer.target.result);
-        //console.log(array);
-        //streamFileToServer(array);
-    }
+    // onFileLoaded(buffer:ArrayBuffer) {
+    //     this.array = new Int8Array(buffer.target.result);
+    //     //console.log(array);
+    //     //streamFileToServer(array);
+    // }
 
     streamFileToServer() {
         let socket = new WebSocket('ws://localhost:2015');
